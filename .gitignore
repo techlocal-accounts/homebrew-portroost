@@ -1,0 +1,10 @@
+.DS_Store
+.build/
+.swiftpm/configuration/
+.swiftpm/xcode/package.xcworkspace/xcuserdata/
+DerivedData/
+dist/
+xcuserdata/
+*.dSYM
+*.xcarchive
+*.zip
