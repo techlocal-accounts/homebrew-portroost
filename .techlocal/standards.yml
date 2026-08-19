@@ -1,5 +1,5 @@
 schemaVersion: 1
-repository: techlocal-accounts/codex-server-monitor
+repository: techlocal-accounts/homebrew-codex-server-monitor
 channel: stable
 adoptedAt: 2026-08-18
 baselineCommit: c922f2e20638825a6a33fef17e36f0ad3b1634f9

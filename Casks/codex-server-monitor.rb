@@ -1,11 +1,11 @@
 cask "codex-server-monitor" do
-  version "__VERSION__"
-  sha256 "__SHA256__"
+  version "1.0.0"
+  sha256 "fe849dcbf6350f8c2ce4889aec0f35117046539e452032c67b95ec7d0e415b11"
 
-  url "https://github.com/techlocal-accounts/codex-server-monitor/releases/download/v#{version}/Codex-Server-Monitor-#{version}-macOS.zip"
+  url "https://github.com/techlocal-accounts/homebrew-codex-server-monitor/releases/download/v#{version}/Codex-Server-Monitor-#{version}-macOS.zip"
   name "Codex Server Monitor"
   desc "Monitor and control persistent local development servers"
-  homepage "https://github.com/techlocal-accounts/codex-server-monitor"
+  homepage "https://github.com/techlocal-accounts/homebrew-codex-server-monitor"
 
   livecheck do
     url :url

@@ -11,13 +11,14 @@ third-party dependencies.
 The public release channel is Homebrew:
 
 ```bash
-brew install --cask --no-quarantine techlocal-accounts/tap/codex-server-monitor
+brew install --cask --no-quarantine \
+  techlocal-accounts/codex-server-monitor/codex-server-monitor
 ```
 
 The `--no-quarantine` flag is currently required because releases are ad-hoc signed. It can be
 removed once Developer ID signing and notarization are configured. Versioned archives and
 checksums are also available from
-[GitHub Releases](https://github.com/techlocal-accounts/codex-server-monitor/releases).
+[GitHub Releases](https://github.com/techlocal-accounts/homebrew-codex-server-monitor/releases).
 
 Requires macOS 14 or newer and Codex's `persistent-local-dev` runner.
 

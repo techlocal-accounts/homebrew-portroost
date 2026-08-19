@@ -2,8 +2,9 @@
 
 ## Supported channel
 
-The supported public distribution path is a versioned GitHub Release installed through the
-`techlocal-accounts/homebrew-tap` Homebrew Cask.
+The supported public distribution path is a versioned GitHub Release installed through the Cask
+in this repository. The `homebrew-` repository prefix lets Homebrew expose the repository as the
+`techlocal-accounts/codex-server-monitor` tap.
 
 Homebrew recommends a Cask for native macOS applications and supports Casks in third-party taps.
 The release archive is immutable and pinned by SHA-256 in the tap.
@@ -27,15 +28,16 @@ The release archive is immutable and pinned by SHA-256 in the tap.
    ```
 
 5. The release workflow publishes the ZIP and checksum to GitHub Releases.
-6. Replace `__VERSION__` and `__SHA256__` in
-   `Distribution/Homebrew/codex-server-monitor.rb.template`, then commit the rendered Cask to
-   `Casks/codex-server-monitor.rb` in `techlocal-accounts/homebrew-tap`.
+6. Update the version and SHA-256 in `Casks/codex-server-monitor.rb` to match the published
+   archive, then commit and push that Cask update to `main`.
 7. Verify the published Cask:
 
    ```bash
-   brew audit --new --cask techlocal-accounts/tap/codex-server-monitor
-   brew install --cask --no-quarantine techlocal-accounts/tap/codex-server-monitor
-   brew uninstall --cask techlocal-accounts/tap/codex-server-monitor
+   brew audit --new --cask \
+     techlocal-accounts/codex-server-monitor/codex-server-monitor
+   brew install --cask --no-quarantine \
+     techlocal-accounts/codex-server-monitor/codex-server-monitor
+   brew uninstall --cask codex-server-monitor
    ```
 
 ## Signing and notarization
