@@ -14,6 +14,7 @@ checks = {
   "released archive checksum" => cask.include?(
     'sha256 "b8bd5270296d030e199c097967716b885c9a2b3eced747d29e671978650154c9"',
   ),
+  "current install guidance"  => cask.include?("Open Anyway"),
   "application artifact"      => cask.include?('app "Codex Server Monitor.app"'),
 }
 

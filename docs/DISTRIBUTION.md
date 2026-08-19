@@ -33,9 +33,11 @@ The release archive is immutable and pinned by SHA-256 in the tap.
 7. Verify the published Cask:
 
    ```bash
-   brew audit --new --cask \
+   brew audit --cask \
      techlocal-accounts/codex-server-monitor/codex-server-monitor
-   brew install --cask --no-quarantine \
+   brew style --cask \
+     techlocal-accounts/codex-server-monitor/codex-server-monitor
+   brew install --cask \
      techlocal-accounts/codex-server-monitor/codex-server-monitor
    brew uninstall --cask codex-server-monitor
    ```
@@ -45,9 +47,10 @@ The release archive is immutable and pinned by SHA-256 in the tap.
 The repository does not contain signing material. With no `CODE_SIGN_IDENTITY`, the build script
 uses an ad-hoc signature so local and CI builds remain reproducible.
 
-For normal Gatekeeper behavior, sign releases with a Developer ID Application certificate and
-submit the archive through Apple's notary service before publishing it. Once every release is
-signed and notarized, remove the `--no-quarantine` instruction from the README and Cask caveat.
+Homebrew preserves macOS quarantine attributes. Until the app is signed with a Developer ID
+Application certificate and submitted through Apple's notary service, users must attempt the first
+launch and then choose **Open Anyway** in **System Settings → Privacy & Security**. Once releases
+are signed and notarized, remove that manual-launch instruction from the README and Cask caveat.
 
 ## Why not the Mac App Store?
 
@@ -66,3 +69,4 @@ References:
 - [Homebrew: Creating a tap](https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap)
 - [Apple: Protecting user data with App Sandbox](https://developer.apple.com/documentation/security/protecting-user-data-with-app-sandbox)
 - [Apple: App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/)
+- [Apple: Open an app from an unknown developer](https://support.apple.com/en-ie/guide/mac-help/-mh40616/mac)

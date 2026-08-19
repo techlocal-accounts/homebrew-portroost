@@ -11,13 +11,15 @@ third-party dependencies.
 The public release channel is Homebrew:
 
 ```bash
-brew install --cask --no-quarantine \
+brew install --cask \
   techlocal-accounts/codex-server-monitor/codex-server-monitor
 ```
 
-The `--no-quarantine` flag is currently required because releases are ad-hoc signed. It can be
-removed once Developer ID signing and notarization are configured. Versioned archives and
-checksums are also available from
+Releases are currently ad-hoc signed, so macOS will block the first launch. After trying to open
+the app once, go to **System Settings → Privacy & Security** and choose **Open Anyway**.
+[Apple recommends](https://support.apple.com/en-ie/guide/mac-help/-mh40616/mac) overriding
+Gatekeeper only for software you trust; this manual step will disappear once Developer ID signing
+and notarization are configured. Versioned archives and checksums are also available from
 [GitHub Releases](https://github.com/techlocal-accounts/homebrew-codex-server-monitor/releases).
 
 Requires macOS 14 or newer and Codex's `persistent-local-dev` runner.

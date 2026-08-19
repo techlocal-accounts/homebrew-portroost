@@ -22,7 +22,9 @@ cask "codex-server-monitor" do
     Codex Server Monitor expects the persistent-local-dev runner at:
       ~/.codex/skills/persistent-local-dev/scripts/persistent-dev.sh
 
-    Releases are currently ad-hoc signed. Until Developer ID signing and
-    notarization are configured, install with Homebrew's --no-quarantine flag.
+    Releases are currently ad-hoc signed. After attempting the first launch,
+    open System Settings > Privacy & Security and choose Open Anyway.
+    This manual step will disappear after Developer ID signing and
+    notarization are configured.
   EOS
 end
