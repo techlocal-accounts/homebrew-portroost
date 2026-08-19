@@ -1,6 +1,6 @@
 cask "codex-server-monitor" do
   version "1.0.0"
-  sha256 "05ba588bb9f2dcb4e8bb4b889fcdfb0767465c812a2a579eafba6ebda0e087c5"
+  sha256 "b8bd5270296d030e199c097967716b885c9a2b3eced747d29e671978650154c9"
 
   url "https://github.com/techlocal-accounts/homebrew-codex-server-monitor/releases/download/v#{version}/Codex-Server-Monitor-#{version}-macOS.zip"
   name "Codex Server Monitor"
