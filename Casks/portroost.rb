@@ -1,8 +1,8 @@
 cask "portroost" do
-  version "1.1.0"
-  sha256 "bd18bdfda6cea85a46522492a62b09562b3cfc90d8bae9dfc0a2e0615012c6bf"
+  version "1.1.1"
+  sha256 "102aaffb4a79d8d10f0e39cd508527be8a4042fcd9065928e5da4fbc8fc9c7ae"
 
-  url "https://github.com/techlocal-accounts/homebrew-portroost/releases/download/v#{version}/Portroost-#{version}-macOS.zip"
+  url "https://github.com/techlocal-accounts/homebrew-portroost/releases/download/v#{version}/PortRoost-#{version}-macOS.zip"
   name "PortRoost"
   desc "Monitor and control persistent local development servers"
   homepage "https://github.com/techlocal-accounts/homebrew-portroost"
@@ -14,10 +14,10 @@ cask "portroost" do
 
   depends_on macos: :sonoma
 
-  app "Portroost.app"
-  binary "#{appdir}/Portroost.app/Contents/MacOS/Portroost",
+  app "PortRoost.app"
+  binary "#{appdir}/PortRoost.app/Contents/MacOS/Portroost",
          target: "portroost"
-  binary "#{appdir}/Portroost.app/Contents/MacOS/Portroost",
+  binary "#{appdir}/PortRoost.app/Contents/MacOS/Portroost",
          target: "codex-server-monitor"
 
   caveats <<~EOS

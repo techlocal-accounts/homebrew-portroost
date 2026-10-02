@@ -12,14 +12,14 @@ checks = {
     "techlocal-accounts/homebrew-portroost/releases",
   ),
   "released archive checksum" => cask.include?(
-    'sha256 "bd18bdfda6cea85a46522492a62b09562b3cfc90d8bae9dfc0a2e0615012c6bf"',
+    'sha256 "102aaffb4a79d8d10f0e39cd508527be8a4042fcd9065928e5da4fbc8fc9c7ae"',
   ),
   "current install guidance"  => cask.include?("Open Anyway"),
   "legacy command alias"      => cask.include?('target: "codex-server-monitor"'),
-  "application artifact"      => cask.include?('app "Portroost.app"'),
+  "application artifact"      => cask.include?('app "PortRoost.app"'),
 }
 
 failures = checks.reject { |_name, passed| passed }.keys
 abort "Cask checks failed: #{failures.join(", ")}" unless failures.empty?
 
-puts "Portroost cask checks passed"
+puts "PortRoost cask checks passed"
