@@ -21,7 +21,8 @@ then
   exit 1
 fi
 
-if [[ "$(readlink "${bundle_root}/Contents/MacOS/CodexServerMonitor")" != "Portroost" ]]
+legacy_target="$(readlink "${bundle_root}/Contents/MacOS/CodexServerMonitor")"
+if [[ "${legacy_target}" != "Portroost" ]]
 then
   echo "Missing legacy executable alias" >&2
   exit 1

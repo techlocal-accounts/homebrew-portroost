@@ -1,9 +1,9 @@
-cask "codex-server-monitor" do
-  version "1.0.0"
-  sha256 "b8bd5270296d030e199c097967716b885c9a2b3eced747d29e671978650154c9"
+cask "portroost" do
+  version "1.1.0"
+  sha256 "bd18bdfda6cea85a46522492a62b09562b3cfc90d8bae9dfc0a2e0615012c6bf"
 
-  url "https://github.com/techlocal-accounts/homebrew-portroost/releases/download/v#{version}/Codex-Server-Monitor-#{version}-macOS.zip"
-  name "Codex Server Monitor"
+  url "https://github.com/techlocal-accounts/homebrew-portroost/releases/download/v#{version}/Portroost-#{version}-macOS.zip"
+  name "Portroost"
   desc "Monitor and control persistent local development servers"
   homepage "https://github.com/techlocal-accounts/homebrew-portroost"
 
@@ -14,12 +14,14 @@ cask "codex-server-monitor" do
 
   depends_on macos: :sonoma
 
-  app "Codex Server Monitor.app"
-  binary "#{appdir}/Codex Server Monitor.app/Contents/MacOS/CodexServerMonitor",
+  app "Portroost.app"
+  binary "#{appdir}/Portroost.app/Contents/MacOS/Portroost",
+         target: "portroost"
+  binary "#{appdir}/Portroost.app/Contents/MacOS/Portroost",
          target: "codex-server-monitor"
 
   caveats <<~EOS
-    Codex Server Monitor expects the persistent-local-dev runner at:
+    Portroost expects the persistent-local-dev runner at:
       ~/.codex/skills/persistent-local-dev/scripts/persistent-dev.sh
 
     Releases are currently ad-hoc signed. After attempting the first launch,
