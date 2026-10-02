@@ -8,9 +8,12 @@ third-party dependencies.
 
 ## Install
 
-The public release channel is Homebrew:
+The public release channel is Homebrew. On versions that require tap trust, review the
+[Cask](Casks/portroost.rb) and approve that specific Cask before installing:
 
 ```bash
+brew tap techlocal-accounts/portroost
+brew trust --cask techlocal-accounts/portroost/portroost
 brew install --cask \
   techlocal-accounts/portroost/portroost
 ```

@@ -26,15 +26,22 @@ The canonical tap is now `techlocal-accounts/portroost`, and the Cask token is `
 
 ```bash
 brew tap techlocal-accounts/portroost
+brew trust --cask techlocal-accounts/portroost/portroost
 brew install --cask techlocal-accounts/portroost/portroost
 ```
 
-For an existing Homebrew installation, quit the monitor, update the old tap, then upgrade.
+On Homebrew versions with tap trust, review [the Cask](../Casks/portroost.rb) before approving
+it. Trust only the specific Cask, rather than the entire tap. The old Cask approval does not
+automatically follow the token rename.
+
+For an existing Homebrew installation, quit the monitor, update the old tap, approve the renamed
+Cask if your Homebrew version requires it, then upgrade.
 The tap's `cask_renames.json` maps `codex-server-monitor` to `portroost`, so Homebrew migrates
 its installation record and replaces the old app during the upgrade:
 
 ```bash
 brew update
+brew trust --cask techlocal-accounts/codex-server-monitor/portroost
 brew upgrade --cask techlocal-accounts/codex-server-monitor/portroost
 ```
 
