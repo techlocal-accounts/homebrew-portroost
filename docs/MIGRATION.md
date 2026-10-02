@@ -1,6 +1,7 @@
-# Migrating to Portroost
+# Migrating to PortRoost
 
-Codex Server Monitor is now **Portroost**, starting with version 1.1.0. Its native menu-bar
+Codex Server Monitor became Portroost in version 1.1.0; version 1.1.1 refines the display name
+to **PortRoost**. Its native menu-bar
 interface, privacy boundary, and persistent-local-dev lifecycle runner remain the same.
 
 ## Repository and links
@@ -17,8 +18,11 @@ Update existing clones without moving or replacing your checkout:
 git remote set-url origin https://github.com/techlocal-accounts/homebrew-portroost.git
 ```
 
-Published v1.0.0 archives, asset names, and checksums remain unchanged. New releases use
-`Portroost-VERSION-macOS.zip` containing `Portroost.app`.
+Published v1.0.0 archives, asset names, and checksums remain unchanged. Version 1.1.0 keeps
+its original `Portroost-1.1.0-macOS.zip` asset. Starting with
+version 1.1.1, the display name is **PortRoost**, and releases use
+`PortRoost-VERSION-macOS.zip` containing `PortRoost.app`. The executable product remains
+`Portroost`; repository, tap, Cask, and CLI identifiers remain lowercase `portroost`.
 
 ## Homebrew
 
@@ -63,9 +67,9 @@ is unchanged.
 
 ## Manual installations
 
-Quit the monitor and replace its app bundle with `Portroost.app` from the new release, in the
+Quit the monitor and replace its app bundle with `PortRoost.app` from the new release, in the
 same Applications folder. If a login item refers to the old app's filesystem path, update it to
-`Portroost.app`. Relaunch the monitor when ready. Ad-hoc signing and the existing Gatekeeper
+`PortRoost.app`. Relaunch the monitor when ready. Ad-hoc signing and the existing Gatekeeper
 first-launch instructions still apply.
 
 The macOS bundle identifier intentionally remains `co.za.techlocal.codex-server-monitor` to

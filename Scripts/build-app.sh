@@ -4,7 +4,7 @@ set -euo pipefail
 
 project_root="$(cd "$(dirname "${0}")/.." && pwd)"
 build_configuration="${1:-release}"
-bundle_root="${project_root}/dist/Portroost.app"
+bundle_root="${project_root}/dist/PortRoost.app"
 contents_root="${bundle_root}/Contents"
 macos_root="${contents_root}/MacOS"
 resources_root="${contents_root}/Resources"

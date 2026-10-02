@@ -1,4 +1,4 @@
-# Portroost
+# PortRoost
 
 A deliberately small native macOS menu-bar app for the long-lived local servers started by
 Codex's `persistent-local-dev` runner.
@@ -64,7 +64,7 @@ swift test
 ./Scripts/verify-app.sh
 ```
 
-The built app is written to `dist/Portroost.app`.
+The built app is written to `dist/PortRoost.app`.
 
 For diagnostics or scripting, the bundled executable also supports:
 

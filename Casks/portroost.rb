@@ -3,7 +3,7 @@ cask "portroost" do
   sha256 "bd18bdfda6cea85a46522492a62b09562b3cfc90d8bae9dfc0a2e0615012c6bf"
 
   url "https://github.com/techlocal-accounts/homebrew-portroost/releases/download/v#{version}/Portroost-#{version}-macOS.zip"
-  name "Portroost"
+  name "PortRoost"
   desc "Monitor and control persistent local development servers"
   homepage "https://github.com/techlocal-accounts/homebrew-portroost"
 
@@ -21,7 +21,7 @@ cask "portroost" do
          target: "codex-server-monitor"
 
   caveats <<~EOS
-    Portroost expects the persistent-local-dev runner at:
+    PortRoost expects the persistent-local-dev runner at:
       ~/.codex/skills/persistent-local-dev/scripts/persistent-dev.sh
 
     Releases are currently ad-hoc signed. After attempting the first launch,

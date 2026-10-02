@@ -6,7 +6,7 @@ project_root="$(cd "$(dirname "${0}")/.." && pwd)"
 bundle_root="${1:-}"
 if [[ -z "${bundle_root}" ]]
 then
-  bundle_root="${project_root}/dist/Portroost.app"
+  bundle_root="${project_root}/dist/PortRoost.app"
 fi
 executable="${bundle_root}/Contents/MacOS/Portroost"
 

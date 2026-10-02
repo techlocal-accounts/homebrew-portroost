@@ -25,11 +25,11 @@ fi
 BUILD_UNIVERSAL=1 "${project_root}/Scripts/build-app.sh" release
 "${project_root}/Scripts/verify-app.sh"
 
-archive="${project_root}/dist/Portroost-${version}-macOS.zip"
+archive="${project_root}/dist/PortRoost-${version}-macOS.zip"
 checksum="${archive}.sha256"
 rm -f "${archive}" "${checksum}"
 ditto -c -k --sequesterRsrc --keepParent \
-  "${project_root}/dist/Portroost.app" \
+  "${project_root}/dist/PortRoost.app" \
   "${archive}"
 
 shasum -a 256 "${archive}" >"${checksum}"

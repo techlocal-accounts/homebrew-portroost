@@ -1,6 +1,6 @@
 # Privacy
 
-Portroost is local-only and collects no data.
+PortRoost is local-only and collects no data.
 
 It does not include analytics, advertising, telemetry, crash reporting, accounts, or networking.
 It reads only the local information needed to show and control persistent development servers:

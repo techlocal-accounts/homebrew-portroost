@@ -28,7 +28,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: >-
           gh release create "$GITHUB_REF_NAME"
-          dist/Portroost-*-macOS.zip
-          dist/Portroost-*-macOS.zip.sha256
+          dist/PortRoost-*-macOS.zip
+          dist/PortRoost-*-macOS.zip.sha256
           --generate-notes
-          --title "Portroost ${GITHUB_REF_NAME#v}"
+          --title "PortRoost ${GITHUB_REF_NAME#v}"
