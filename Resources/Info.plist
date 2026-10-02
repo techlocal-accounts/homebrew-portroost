@@ -5,9 +5,9 @@
   <key>CFBundleDevelopmentRegion</key>
   <string>en</string>
   <key>CFBundleDisplayName</key>
-  <string>Codex Server Monitor</string>
+  <string>Portroost</string>
   <key>CFBundleExecutable</key>
-  <string>CodexServerMonitor</string>
+  <string>Portroost</string>
   <key>CFBundleIdentifier</key>
   <string>co.za.techlocal.codex-server-monitor</string>
   <key>CFBundleIconFile</key>
@@ -15,13 +15,13 @@
   <key>CFBundleInfoDictionaryVersion</key>
   <string>6.0</string>
   <key>CFBundleName</key>
-  <string>Codex Server Monitor</string>
+  <string>Portroost</string>
   <key>CFBundlePackageType</key>
   <string>APPL</string>
   <key>CFBundleShortVersionString</key>
-  <string>1.0.0</string>
+  <string>1.1.0</string>
   <key>CFBundleVersion</key>
-  <string>1</string>
+  <string>2</string>
   <key>LSMinimumSystemVersion</key>
   <string>14.0</string>
   <key>LSApplicationCategoryType</key>

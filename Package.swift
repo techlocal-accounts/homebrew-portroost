@@ -3,18 +3,18 @@
 import PackageDescription
 
 let package = Package(
-  name: "CodexServerMonitor",
+  name: "Portroost",
   platforms: [
     .macOS(.v14),
   ],
   products: [
     .library(name: "ServerMonitorCore", targets: ["ServerMonitorCore"]),
-    .executable(name: "CodexServerMonitor", targets: ["CodexServerMonitor"]),
+    .executable(name: "Portroost", targets: ["Portroost"]),
   ],
   targets: [
     .target(name: "ServerMonitorCore"),
     .executableTarget(
-      name: "CodexServerMonitor",
+      name: "Portroost",
       dependencies: ["ServerMonitorCore"]
     ),
     .testTarget(

@@ -3,7 +3,7 @@ import Darwin
 import ServerMonitorCore
 
 @main
-struct CodexServerMonitorApplication {
+struct PortroostApplication {
   @MainActor
   static func main() {
     if runCommandLineModeIfRequested() {
@@ -55,7 +55,7 @@ struct CodexServerMonitorApplication {
       return false
     }
     guard arguments.count == 2 else {
-      print("Usage: CodexServerMonitor \(option) <server-id>")
+      print("Usage: Portroost \(option) <server-id>")
       exit(2)
     }
 
@@ -123,7 +123,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     button.image = image
     button.imagePosition = .imageLeading
     button.title = " 0 MB"
-    button.toolTip = "Codex local servers"
+    button.toolTip = "Portroost · local servers"
   }
 
   private func refresh() {
@@ -159,7 +159,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
   private func rebuildMenu() {
     menu.removeAllItems()
 
-    let heading = NSMenuItem(title: "Codex Local Servers", action: nil, keyEquivalent: "")
+    let heading = NSMenuItem(title: "Portroost", action: nil, keyEquivalent: "")
     heading.isEnabled = false
     menu.addItem(heading)
 
@@ -225,7 +225,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     menu.addItem(refresh)
 
     let quit = NSMenuItem(
-      title: "Quit Codex Server Monitor",
+      title: "Quit Portroost",
       action: #selector(quitApplication),
       keyEquivalent: "q"
     )

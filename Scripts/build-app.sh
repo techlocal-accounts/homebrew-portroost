@@ -4,7 +4,7 @@ set -euo pipefail
 
 project_root="$(cd "$(dirname "${0}")/.." && pwd)"
 build_configuration="${1:-release}"
-bundle_root="${project_root}/dist/Codex Server Monitor.app"
+bundle_root="${project_root}/dist/Portroost.app"
 contents_root="${bundle_root}/Contents"
 macos_root="${contents_root}/MacOS"
 resources_root="${contents_root}/Resources"
@@ -31,9 +31,10 @@ cp \
   "${project_root}/Resources/PrivacyInfo.xcprivacy" \
   "${resources_root}/PrivacyInfo.xcprivacy"
 cp \
-  "${binary_root}/CodexServerMonitor" \
-  "${macos_root}/CodexServerMonitor"
-chmod 755 "${macos_root}/CodexServerMonitor"
+  "${binary_root}/Portroost" \
+  "${macos_root}/Portroost"
+chmod 755 "${macos_root}/Portroost"
+ln -s Portroost "${macos_root}/CodexServerMonitor"
 
 signing_arguments=(--force --sign "${signing_identity}")
 if [[ "${signing_identity}" != "-" ]]

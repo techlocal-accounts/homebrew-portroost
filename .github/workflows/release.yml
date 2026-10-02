@@ -28,7 +28,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: >-
           gh release create "$GITHUB_REF_NAME"
-          dist/Codex-Server-Monitor-*-macOS.zip
-          dist/Codex-Server-Monitor-*-macOS.zip.sha256
+          dist/Portroost-*-macOS.zip
+          dist/Portroost-*-macOS.zip.sha256
           --generate-notes
-          --title "Codex Server Monitor ${GITHUB_REF_NAME#v}"
+          --title "Portroost ${GITHUB_REF_NAME#v}"

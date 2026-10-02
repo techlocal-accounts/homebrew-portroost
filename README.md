@@ -1,4 +1,4 @@
-# Codex Server Monitor
+# Portroost
 
 A deliberately small native macOS menu-bar app for the long-lived local servers started by
 Codex's `persistent-local-dev` runner.
@@ -12,7 +12,7 @@ The public release channel is Homebrew:
 
 ```bash
 brew install --cask \
-  techlocal-accounts/codex-server-monitor/codex-server-monitor
+  techlocal-accounts/portroost/portroost
 ```
 
 Releases are currently ad-hoc signed, so macOS will block the first launch. After trying to open
@@ -20,7 +20,7 @@ the app once, go to **System Settings → Privacy & Security** and choose **Open
 [Apple recommends](https://support.apple.com/en-ie/guide/mac-help/-mh40616/mac) overriding
 Gatekeeper only for software you trust; this manual step will disappear once Developer ID signing
 and notarization are configured. Versioned archives and checksums are also available from
-[GitHub Releases](https://github.com/techlocal-accounts/homebrew-codex-server-monitor/releases).
+[GitHub Releases](https://github.com/techlocal-accounts/homebrew-portroost/releases).
 
 Requires macOS 14 or newer and Codex's `persistent-local-dev` runner.
 
@@ -61,20 +61,22 @@ swift test
 ./Scripts/verify-app.sh
 ```
 
-The built app is written to `dist/Codex Server Monitor.app`.
+The built app is written to `dist/Portroost.app`.
 
 For diagnostics or scripting, the bundled executable also supports:
 
 ```bash
-CodexServerMonitor --snapshot
-CodexServerMonitor --stop <server-id>
-CodexServerMonitor --restart <server-id>
+portroost --snapshot
+portroost --stop <server-id>
+portroost --restart <server-id>
 ```
 
 ## Design
 
 This is AppKit, not Electron, a WebView, or a local web server. It has no third-party dependencies,
 opens no listening port, and refreshes its process snapshot every ten seconds.
+
+Upgrading from Codex Server Monitor? See the [migration guide](docs/MIGRATION.md).
 
 See [distribution](docs/DISTRIBUTION.md), [privacy](docs/PRIVACY.md), and
 [contributing](CONTRIBUTING.md) for project details.

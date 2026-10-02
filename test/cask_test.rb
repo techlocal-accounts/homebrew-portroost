@@ -9,7 +9,7 @@ checks = {
   "SHA-256 checksum"          => cask.match?(/^\s*sha256 "[0-9a-f]{64}"$/),
   "immutable GitHub release"  => cask.include?("/releases/download/v\#{version}/"),
   "single-repository release" => cask.include?(
-    "techlocal-accounts/homebrew-codex-server-monitor/releases",
+    "techlocal-accounts/homebrew-portroost/releases",
   ),
   "released archive checksum" => cask.include?(
     'sha256 "b8bd5270296d030e199c097967716b885c9a2b3eced747d29e671978650154c9"',

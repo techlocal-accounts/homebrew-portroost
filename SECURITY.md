@@ -8,7 +8,7 @@ public report.
 
 ## Security model
 
-Codex Server Monitor is a local-only utility. It opens no listening port and sends no telemetry.
+Portroost is a local-only utility. It opens no listening port and sends no telemetry.
 It reads the persistent server registry, launchd state, and process memory data available to the
 current macOS user. Lifecycle actions are delegated to the existing `persistent-local-dev` runner.
 

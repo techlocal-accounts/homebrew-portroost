@@ -1,6 +1,6 @@
 # Privacy
 
-Codex Server Monitor is local-only and collects no data.
+Portroost is local-only and collects no data.
 
 It does not include analytics, advertising, telemetry, crash reporting, accounts, or networking.
 It reads only the local information needed to show and control persistent development servers:

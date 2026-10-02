@@ -4,7 +4,7 @@
 
 The supported public distribution path is a versioned GitHub Release installed through the Cask
 in this repository. The `homebrew-` repository prefix lets Homebrew expose the repository as the
-`techlocal-accounts/codex-server-monitor` tap.
+`techlocal-accounts/portroost` tap.
 
 Homebrew recommends a Cask for native macOS applications and supports Casks in third-party taps.
 The release archive is immutable and pinned by SHA-256 in the tap.
@@ -28,18 +28,18 @@ The release archive is immutable and pinned by SHA-256 in the tap.
    ```
 
 5. The release workflow publishes the ZIP and checksum to GitHub Releases.
-6. Update the version and SHA-256 in `Casks/codex-server-monitor.rb` to match the published
+6. Update the version and SHA-256 in `Casks/portroost.rb` to match the published
    archive, then commit and push that Cask update to `main`.
 7. Verify the published Cask:
 
    ```bash
    brew audit --cask \
-     techlocal-accounts/codex-server-monitor/codex-server-monitor
+     techlocal-accounts/portroost/portroost
    brew style --cask \
-     techlocal-accounts/codex-server-monitor/codex-server-monitor
+     techlocal-accounts/portroost/portroost
    brew install --cask \
-     techlocal-accounts/codex-server-monitor/codex-server-monitor
-   brew uninstall --cask codex-server-monitor
+     techlocal-accounts/portroost/portroost
+   brew uninstall --cask portroost
    ```
 
 ## Signing and notarization
